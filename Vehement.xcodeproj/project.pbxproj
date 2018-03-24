@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		5A829DF77AA2A8A58B03A677 /* Pods_Vehement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B076B25DEDADF251890B226A /* Pods_Vehement.framework */; };
+		91054DD620669541005C4326 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91054DD520669541005C4326 /* CategoryCell.swift */; };
+		91054DD92066986D005C4326 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91054DD82066986D005C4326 /* Category.swift */; };
+		91054DDC2066BE8E005C4326 /* WorkoutsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91054DDB2066BE8E005C4326 /* WorkoutsCell.swift */; };
+		91054DDE2066C008005C4326 /* Workouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91054DDD2066C008005C4326 /* Workouts.swift */; };
+		91054DE02066C435005C4326 /* AllWorkoutsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91054DDF2066C435005C4326 /* AllWorkoutsVC.swift */; };
 		912F05FA202DD2790023DC98 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 912F05F9202DD2790023DC98 /* GoogleService-Info.plist */; };
 		912F05FB202DE58E0023DC98 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912F0602202DE58E0023DC98 /* Bolts.framework */; };
 		912F05FC202DE58E0023DC98 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912F0603202DE58E0023DC98 /* FBSDKCoreKit.framework */; };
@@ -18,6 +23,11 @@
 		912F0601202DE58E0023DC98 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912F0608202DE58E0023DC98 /* nanopb.framework */; };
 		912F060A202E17390023DC98 /* GTMOAuth2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912F060B202E17390023DC98 /* GTMOAuth2.framework */; };
 		912FF3A9202A203A00463BF2 /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FF3A8202A203A00463BF2 /* RoundedImage.swift */; };
+		9140E83720668C5500B9D88A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9140E83620668C5500B9D88A /* DataService.swift */; };
+		914DC85F2066762E000FF017 /* NavTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914DC85E2066762E000FF017 /* NavTabVC.swift */; };
+		914DC86120667900000FF017 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914DC86020667900000FF017 /* ProfileVC.swift */; };
+		914DC86320667CBA000FF017 /* GymFinderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914DC86220667CBA000FF017 /* GymFinderVC.swift */; };
+		914DC8652066817A000FF017 /* WorkoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914DC8642066817A000FF017 /* WorkoutVC.swift */; };
 		91C0B1A2202B22B400B93401 /* PreLoadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C0B1A1202B22B400B93401 /* PreLoadVC.swift */; };
 		91C0B1A6202B2BE800B93401 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C0B1A5202B2BE800B93401 /* LoginVC.swift */; };
 		91C0B1A8202B2EC600B93401 /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C0B1A7202B2EC600B93401 /* CircularTransition.swift */; };
@@ -31,7 +41,6 @@
 		91DDA9A32030968700541243 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DDA9A22030968700541243 /* AudioToolbox.framework */; };
 		91DDA9A5203096A500541243 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DDA9A4203096A500541243 /* HealthKit.framework */; };
 		91DDA9A72033A65000541243 /* SendCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DDA9A62033A65000541243 /* SendCodeVC.swift */; };
-		91DDA9A92035E0B000541243 /* MainPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DDA9A82035E0B000541243 /* MainPageVC.swift */; };
 		91DDA9B520387F2400541243 /* BEMAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 91DDA9AE20387F2400541243 /* BEMAnimationManager.m */; };
 		91DDA9B620387F2400541243 /* BEMPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 91DDA9AF20387F2400541243 /* BEMPathManager.m */; };
 		91DDA9B720387F2400541243 /* BEMCheckBoxGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 91DDA9B020387F2400541243 /* BEMCheckBoxGroup.m */; };
@@ -39,6 +48,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		91054DD520669541005C4326 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		91054DD82066986D005C4326 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		91054DDB2066BE8E005C4326 /* WorkoutsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsCell.swift; sourceTree = "<group>"; };
+		91054DDD2066C008005C4326 /* Workouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workouts.swift; sourceTree = "<group>"; };
+		91054DDF2066C435005C4326 /* AllWorkoutsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AllWorkoutsVC.swift; path = Vehement/AllWorkoutsVC.swift; sourceTree = SOURCE_ROOT; };
 		912F05F8202DCA340023DC98 /* Vehement.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Vehement.entitlements; sourceTree = "<group>"; };
 		912F05F9202DD2790023DC98 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		912F0602202DE58E0023DC98 /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bolts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +66,11 @@
 		912F060C202F24E00023DC98 /* Vehement-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Vehement-Bridging-Header.h"; sourceTree = "<group>"; };
 		912F060D202F24E10023DC98 /* ObjectiveCCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveCCode.h; sourceTree = "<group>"; };
 		912FF3A8202A203A00463BF2 /* RoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
+		9140E83620668C5500B9D88A /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		914DC85E2066762E000FF017 /* NavTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavTabVC.swift; sourceTree = "<group>"; };
+		914DC86020667900000FF017 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		914DC86220667CBA000FF017 /* GymFinderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymFinderVC.swift; sourceTree = "<group>"; };
+		914DC8642066817A000FF017 /* WorkoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutVC.swift; sourceTree = "<group>"; };
 		91C0B1A1202B22B400B93401 /* PreLoadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreLoadVC.swift; sourceTree = "<group>"; };
 		91C0B1A5202B2BE800B93401 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		91C0B1A7202B2EC600B93401 /* CircularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
@@ -67,7 +86,6 @@
 		91DDA9A22030968700541243 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		91DDA9A4203096A500541243 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		91DDA9A62033A65000541243 /* SendCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCodeVC.swift; sourceTree = "<group>"; };
-		91DDA9A82035E0B000541243 /* MainPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageVC.swift; sourceTree = "<group>"; };
 		91DDA9AD20387F2400541243 /* BEMCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMCheckBox.h; sourceTree = "<group>"; };
 		91DDA9AE20387F2400541243 /* BEMAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMAnimationManager.m; sourceTree = "<group>"; };
 		91DDA9AF20387F2400541243 /* BEMPathManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMPathManager.m; sourceTree = "<group>"; };
@@ -113,6 +131,32 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		91054DD420669514005C4326 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				91054DD520669541005C4326 /* CategoryCell.swift */,
+				91054DDB2066BE8E005C4326 /* WorkoutsCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		91054DD720669858005C4326 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				91054DD82066986D005C4326 /* Category.swift */,
+				91054DDD2066C008005C4326 /* Workouts.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9140E83520668C4200B9D88A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9140E83620668C5500B9D88A /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		91C0B1A9202B6F3000B93401 /* Animation & Effects */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,7 +167,7 @@
 			path = "Animation & Effects";
 			sourceTree = "<group>";
 		};
-		91C0B1AA202B6F3B00B93401 /* ViewControllers */ = {
+		91C0B1AA202B6F3B00B93401 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				91C0B1A1202B22B400B93401 /* PreLoadVC.swift */,
@@ -131,9 +175,14 @@
 				91C0B1AE202D032900B93401 /* JoinNowVC.swift */,
 				91C0B1B0202D034C00B93401 /* SignInVC.swift */,
 				91DDA9A62033A65000541243 /* SendCodeVC.swift */,
-				91DDA9A82035E0B000541243 /* MainPageVC.swift */,
+				914DC85E2066762E000FF017 /* NavTabVC.swift */,
+				914DC86020667900000FF017 /* ProfileVC.swift */,
+				914DC86220667CBA000FF017 /* GymFinderVC.swift */,
+				914DC8642066817A000FF017 /* WorkoutVC.swift */,
+				91054DDF2066C435005C4326 /* AllWorkoutsVC.swift */,
 			);
-			path = ViewControllers;
+			name = ViewController;
+			path = ViewControllers.swift;
 			sourceTree = "<group>";
 		};
 		91D3C7A22028B9070027C6F8 = {
@@ -157,9 +206,12 @@
 		91D3C7AD2028B9070027C6F8 /* Vehement */ = {
 			isa = PBXGroup;
 			children = (
+				91054DD420669514005C4326 /* View */,
+				91054DD720669858005C4326 /* Model */,
+				9140E83520668C4200B9D88A /* Services */,
 				912F05F8202DCA340023DC98 /* Vehement.entitlements */,
 				91DDA9AC20387F2400541243 /* Classes */,
-				91C0B1AA202B6F3B00B93401 /* ViewControllers */,
+				91C0B1AA202B6F3B00B93401 /* ViewController */,
 				91C0B1A9202B6F3000B93401 /* Animation & Effects */,
 				91D3C7AE2028B9070027C6F8 /* AppDelegate.swift */,
 				91D3C7B22028B9070027C6F8 /* Main.storyboard */,
@@ -386,16 +438,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				91DDA9B520387F2400541243 /* BEMAnimationManager.m in Sources */,
+				91054DD620669541005C4326 /* CategoryCell.swift in Sources */,
+				914DC85F2066762E000FF017 /* NavTabVC.swift in Sources */,
 				91DDA9B820387F2400541243 /* BEMCheckBox.m in Sources */,
 				91C0B1AF202D032900B93401 /* JoinNowVC.swift in Sources */,
+				914DC86120667900000FF017 /* ProfileVC.swift in Sources */,
 				912FF3A9202A203A00463BF2 /* RoundedImage.swift in Sources */,
 				91C0B1B1202D034C00B93401 /* SignInVC.swift in Sources */,
 				91DDA9A72033A65000541243 /* SendCodeVC.swift in Sources */,
+				91054DDE2066C008005C4326 /* Workouts.swift in Sources */,
 				91C0B1A2202B22B400B93401 /* PreLoadVC.swift in Sources */,
+				9140E83720668C5500B9D88A /* DataService.swift in Sources */,
+				91054DD92066986D005C4326 /* Category.swift in Sources */,
 				91C0B1A8202B2EC600B93401 /* CircularTransition.swift in Sources */,
+				91054DE02066C435005C4326 /* AllWorkoutsVC.swift in Sources */,
+				914DC86320667CBA000FF017 /* GymFinderVC.swift in Sources */,
+				91054DDC2066BE8E005C4326 /* WorkoutsCell.swift in Sources */,
 				91DDA9B720387F2400541243 /* BEMCheckBoxGroup.m in Sources */,
 				91DDA9B620387F2400541243 /* BEMPathManager.m in Sources */,
-				91DDA9A92035E0B000541243 /* MainPageVC.swift in Sources */,
+				914DC8652066817A000FF017 /* WorkoutVC.swift in Sources */,
 				91C0B1A6202B2BE800B93401 /* LoginVC.swift in Sources */,
 				91D3C7AF2028B9070027C6F8 /* AppDelegate.swift in Sources */,
 				91C0B1AD202B793100B93401 /* BoarderButton.swift in Sources */,
