@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 class AllWorkoutsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    
     
     @IBOutlet weak var workoutsCollection: UICollectionView!
     
@@ -21,7 +22,11 @@ class AllWorkoutsVC: UIViewController, UICollectionViewDelegate, UICollectionVie
         workoutsCollection.dataSource = self
         workoutsCollection.delegate = self
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
     func initWorkouts(category: Category) {
         workouts = DataService.instance.getWorkout(forCategoryTitle: category.title)
     }
@@ -40,6 +45,30 @@ class AllWorkoutsVC: UIViewController, UICollectionViewDelegate, UICollectionVie
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let yourWidth = workoutsCollection.bounds.width/2.0
+        let yourHeight = yourWidth
+        
+        return CGSize(width: yourWidth, height: yourHeight)
+    }
+    
+    @IBAction func onPlayPressed(_ sender: Any) {
+        performSegue(withIdentifier: "onPlayPressed", sender: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self as? UIGestureRecognizerDelegate
+    }
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRequireFailureOf otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return (otherGestureRecognizer is UIPanGestureRecognizer)
+    }
     
 
 }

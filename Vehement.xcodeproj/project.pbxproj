@@ -13,6 +13,9 @@
 		91054DDC2066BE8E005C4326 /* WorkoutsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91054DDB2066BE8E005C4326 /* WorkoutsCell.swift */; };
 		91054DDE2066C008005C4326 /* Workouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91054DDD2066C008005C4326 /* Workouts.swift */; };
 		91054DE02066C435005C4326 /* AllWorkoutsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91054DDF2066C435005C4326 /* AllWorkoutsVC.swift */; };
+		91054DE2206903FB005C4326 /* VideoViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91054DE1206903FB005C4326 /* VideoViewVC.swift */; };
+		91054DE42069239B005C4326 /* imageFromSystemBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91054DE32069239B005C4326 /* imageFromSystemBarButton.swift */; };
+		91054DE6206963D8005C4326 /* WorkoutsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91054DE5206963D8005C4326 /* WorkoutsTableCell.swift */; };
 		912F05FA202DD2790023DC98 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 912F05F9202DD2790023DC98 /* GoogleService-Info.plist */; };
 		912F05FB202DE58E0023DC98 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912F0602202DE58E0023DC98 /* Bolts.framework */; };
 		912F05FC202DE58E0023DC98 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912F0603202DE58E0023DC98 /* FBSDKCoreKit.framework */; };
@@ -53,6 +56,9 @@
 		91054DDB2066BE8E005C4326 /* WorkoutsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsCell.swift; sourceTree = "<group>"; };
 		91054DDD2066C008005C4326 /* Workouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workouts.swift; sourceTree = "<group>"; };
 		91054DDF2066C435005C4326 /* AllWorkoutsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AllWorkoutsVC.swift; path = Vehement/AllWorkoutsVC.swift; sourceTree = SOURCE_ROOT; };
+		91054DE1206903FB005C4326 /* VideoViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewVC.swift; sourceTree = "<group>"; };
+		91054DE32069239B005C4326 /* imageFromSystemBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageFromSystemBarButton.swift; sourceTree = "<group>"; };
+		91054DE5206963D8005C4326 /* WorkoutsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsTableCell.swift; sourceTree = "<group>"; };
 		912F05F8202DCA340023DC98 /* Vehement.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Vehement.entitlements; sourceTree = "<group>"; };
 		912F05F9202DD2790023DC98 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		912F0602202DE58E0023DC98 /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bolts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +142,7 @@
 			children = (
 				91054DD520669541005C4326 /* CategoryCell.swift */,
 				91054DDB2066BE8E005C4326 /* WorkoutsCell.swift */,
+				91054DE5206963D8005C4326 /* WorkoutsTableCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -163,6 +170,7 @@
 				912FF3A8202A203A00463BF2 /* RoundedImage.swift */,
 				91C0B1A7202B2EC600B93401 /* CircularTransition.swift */,
 				91C0B1AC202B793100B93401 /* BoarderButton.swift */,
+				91054DE32069239B005C4326 /* imageFromSystemBarButton.swift */,
 			);
 			path = "Animation & Effects";
 			sourceTree = "<group>";
@@ -180,6 +188,7 @@
 				914DC86220667CBA000FF017 /* GymFinderVC.swift */,
 				914DC8642066817A000FF017 /* WorkoutVC.swift */,
 				91054DDF2066C435005C4326 /* AllWorkoutsVC.swift */,
+				91054DE1206903FB005C4326 /* VideoViewVC.swift */,
 			);
 			name = ViewController;
 			path = ViewControllers.swift;
@@ -444,8 +453,10 @@
 				91C0B1AF202D032900B93401 /* JoinNowVC.swift in Sources */,
 				914DC86120667900000FF017 /* ProfileVC.swift in Sources */,
 				912FF3A9202A203A00463BF2 /* RoundedImage.swift in Sources */,
+				91054DE2206903FB005C4326 /* VideoViewVC.swift in Sources */,
 				91C0B1B1202D034C00B93401 /* SignInVC.swift in Sources */,
 				91DDA9A72033A65000541243 /* SendCodeVC.swift in Sources */,
+				91054DE6206963D8005C4326 /* WorkoutsTableCell.swift in Sources */,
 				91054DDE2066C008005C4326 /* Workouts.swift in Sources */,
 				91C0B1A2202B22B400B93401 /* PreLoadVC.swift in Sources */,
 				9140E83720668C5500B9D88A /* DataService.swift in Sources */,
@@ -457,6 +468,7 @@
 				91DDA9B720387F2400541243 /* BEMCheckBoxGroup.m in Sources */,
 				91DDA9B620387F2400541243 /* BEMPathManager.m in Sources */,
 				914DC8652066817A000FF017 /* WorkoutVC.swift in Sources */,
+				91054DE42069239B005C4326 /* imageFromSystemBarButton.swift in Sources */,
 				91C0B1A6202B2BE800B93401 /* LoginVC.swift in Sources */,
 				91D3C7AF2028B9070027C6F8 /* AppDelegate.swift in Sources */,
 				91C0B1AD202B793100B93401 /* BoarderButton.swift in Sources */,

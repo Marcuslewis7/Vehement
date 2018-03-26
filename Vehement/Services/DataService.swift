@@ -19,10 +19,18 @@ class DataService {
     ]
     
     private let allWorkouts = [
-        Workout(title: "Chest Press", imageName: "bicepcurl.png"),
-        Workout(title: "Dumbbell Press", imageName: "bicepcurl.png"),
-        Workout(title: "Pectoral Fly", imageName: "bicepcurl.png"),
-        Workout(title: "Chest Machine", imageName: "bicepcurl.png")
+        Workout(title: "Chest Press", imageName: "bicepcurl.png", timeLength: "5:30", videoCode: "_kAlQ5Bh5aY"),
+        Workout(title: "Dumbbell Press", imageName: "gloves.png", timeLength: "0:29", videoCode: "_kAlQ5Bh5aY"),
+        Workout(title: "Pectoral Fly", imageName: "sixplates.png", timeLength: "1:24", videoCode: "_kAlQ5Bh5aY"),
+        Workout(title: "Chest Machine", imageName: "weightbelt.png", timeLength: "2:59", videoCode: "_kAlQ5Bh5aY"),
+        Workout(title: "Chest Incline", imageName: "sixplates.png", timeLength: "2:53", videoCode: "_kAlQ5Bh5aY"),
+        Workout(title: "Chest Decline", imageName: "gloves.png", timeLength: "1:42", videoCode: "_kAlQ5Bh5aY"),
+        Workout(title: "Chest Flat", imageName: "bicepcurl.png", timeLength: "4:45", videoCode: "_kAlQ5Bh5aY"),
+        Workout(title: "Tricep Machine", imageName: "sixplates.png", timeLength: "0:45", videoCode: "_kAlQ5Bh5aY"),
+        Workout(title: "Tricep Dips", imageName: "gloves.png", timeLength: "3:41", videoCode: "_kAlQ5Bh5aY"),
+        Workout(title: "Tricep Pull", imageName: "weightbelt.png", timeLength: "2:25", videoCode: "_kAlQ5Bh5aY"),
+        Workout(title: "Bicep Machine", imageName: "gloves.png", timeLength: "2:43", videoCode: "_kAlQ5Bh5aY"),
+        Workout(title: "Bicep Curl", imageName: "sixplates.png", timeLength: "1:44", videoCode: "_kAlQ5Bh5aY")
     ]
     
     /*
@@ -66,6 +74,8 @@ class DataService {
     func getAllWorkouts() -> [Workout] {
         return allWorkouts
     }
+    
+    
     /*
     func getFeatured() -> [Workout] {
         return featured

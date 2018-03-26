@@ -18,6 +18,10 @@ class WorkoutVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         categoryTableView.delegate = self
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DataService.instance.getCategories().count
     }
@@ -32,7 +36,6 @@ class WorkoutVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
     }
 
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let category = DataService.instance.getCategories()[indexPath.row]
         performSegue(withIdentifier: "toAllWorkoutsVC", sender: category)
@@ -44,5 +47,7 @@ class WorkoutVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             AllWorkoutsVC.initWorkouts(category: sender as! Category)
         }
     }
+    
+    
     
 }
