@@ -12,6 +12,8 @@ class WorkoutVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var categoryTableView: UITableView!
     
+    var segueIdentifier = ["toAllWorkoutsVC","toFeaturedVC","toMyPlanVC","toOtherVC"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         categoryTableView.dataSource = self
@@ -37,11 +39,22 @@ class WorkoutVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //method 1 - works but no data passed
+        //let viewController = storyboard?.instantiateViewController(withIdentifier: category.title)
+        //self.navigationController?.pushViewController(viewController!, animated: true)
+        //method 2 - doesnt work but data passed
+        //performSegue(withIdentifier: "toAllWorkoutsVC", sender: category)
+        //method 3 - works but no data passed
+        //performSegue(withIdentifier: segueIdentifier[indexPath.row], sender: self)
+        //method4
         let category = DataService.instance.getCategories()[indexPath.row]
-        performSegue(withIdentifier: "toAllWorkoutsVC", sender: category)
-    }
+             if indexPath.row == 0 { self.performSegue(withIdentifier: "toAllWorkoutsVC", sender: category)}
+        else if indexPath.row == 1 { self.performSegue(withIdentifier: "toFeaturedVC", sender: category)}
+        else if indexPath.row == 2 { self.performSegue(withIdentifier: "toMyPlanVC", sender: category)}
+        else if indexPath.row == 3 { self.performSegue(withIdentifier: "toOtherVC", sender: category)}
+        }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let AllWorkoutsVC = segue.destination as? AllWorkoutsVC {
             assert(sender as? Category != nil)
             AllWorkoutsVC.initWorkouts(category: sender as! Category)

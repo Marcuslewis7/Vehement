@@ -14,11 +14,17 @@ struct Workout {
     private(set) public var imageName: String
     private(set) public var timeLength: String
     private(set) public var videoCode: String
+    private(set) public var level: String
+    private(set) public var type: String
+    private(set) public var likes: String
     
-    init(title: String, imageName: String, timeLength: String, videoCode: String) {
+    init(title: String, imageName: String, timeLength: String, videoCode: String, level: String, type: String, likes: String) {
         self.title = title
         self.imageName = imageName
         self.timeLength = timeLength
         self.videoCode = videoCode
+        self.level = level
+        self.type = type
+        self.likes = likes
     }
 }
