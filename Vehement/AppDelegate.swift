@@ -48,7 +48,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             print("Setting category to AVAudioSessionCategoryPlayback failed.")
         }
         
-        
         return true
     }
     

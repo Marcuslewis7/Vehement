@@ -2,4 +2,5 @@
 //  Use this file to import your target's public headers that you would like to expose to Swift.
 //
 
-#import <TwitterKit/TWTRKit.h>
+#import “YTPlayerView.h”
+@property(nonatomic, strong) IBOutlet YTPlayerView *playerView;

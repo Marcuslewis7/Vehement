@@ -82,7 +82,7 @@ class PreLoadVC: UIViewController, UIViewControllerTransitioningDelegate {
         basicAnimation.toValue = 1
         basicAnimation.duration = 5
         basicAnimation.fillMode = kCAFillModeForwards
-        basicAnimation.isRemovedOnCompletion = true
+        basicAnimation.isRemovedOnCompletion = false
         shapeLayer.add(basicAnimation, forKey: "urSoBasic")
     }
     

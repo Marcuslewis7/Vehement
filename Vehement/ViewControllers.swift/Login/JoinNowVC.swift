@@ -30,7 +30,7 @@ class JoinNowVC: UIViewController ,GIDSignInUIDelegate, FBSDKLoginButtonDelegate
         setupGoogleButtons()
         createButton.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
         if Auth.auth().currentUser != nil {
-            //log out the user
+            //self.performSegue(withIdentifier: "existingAccountSegue", sender: self)
         }
         
     }
@@ -121,7 +121,7 @@ class JoinNowVC: UIViewController ,GIDSignInUIDelegate, FBSDKLoginButtonDelegate
         guard let username = usernameTextField.text else { return }
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
-        
+    
         Auth.auth().createUser(withEmail: email, password: password) { user, error in
             if error == nil && user != nil {
                 print("User created!")

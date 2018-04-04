@@ -132,5 +132,29 @@ class FeaturedVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         performSegue(withIdentifier: "onPlayPressed", sender: self)
     }
     
+    @IBAction func onMLPlayPressed(_ sender: Any) {
+        performSegue(withIdentifier: "onPlayPressed", sender: self)
+    }
+    
+    @IBAction func onRPlayPressed(_ sender: Any) {
+        performSegue(withIdentifier: "onPlayPressed", sender: self)
+    }
+    
+    @IBAction func onMBPlayPressed(_ sender: Any) {
+        performSegue(withIdentifier: "onPlayPressed", sender: self)
+    }
+    
+    @IBAction func onBTPlayPressed(_ sender: Any) {
+        performSegue(withIdentifier: "onPlayPressed", sender: self)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 }
