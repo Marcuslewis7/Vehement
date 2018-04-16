@@ -28,6 +28,13 @@ class SignInVC: UIViewController ,GIDSignInUIDelegate, FBSDKLoginButtonDelegate 
         logInButton.addTarget(self, action: #selector(handleSignIn), for: .touchUpInside)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if Auth.auth().currentUser != nil {
+            self.performSegue(withIdentifier: "logInSegue", sender: self)
+        }
+    }
+    
     //add google sign in button
     fileprivate func setupGoogleButtons() {
         let googleButton = GIDSignInButton()

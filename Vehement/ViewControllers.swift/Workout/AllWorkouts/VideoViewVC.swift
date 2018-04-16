@@ -9,19 +9,28 @@
 import UIKit
 import AVKit
 import AVFoundation
-@IBDesignable
+import YouTubePlayer
+import WebKit
+//@IBDesignable
+
 
 class VideoViewVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    
     @IBOutlet weak var videoTableView: UITableView!
-    @IBOutlet var myWebView: UIWebView!
+    @IBOutlet var videoPlayer: YouTubePlayerView!
+    var myPassVideoCode = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("this is my VideoViewVC video code: ",videocode)//myPassVideoCode)
+        videoPlayer.loadVideoID(videocode)//myPassVideoCode)
+        
         videoTableView.dataSource = self
         videoTableView.delegate = self
-        
-        myWebView.loadHTMLString("<iframe width=\"\(myWebView.frame.size.width)\" height=\"\(myWebView.frame.size.height)\" src=\"https://www.youtube.com/embed/_kAlQ5Bh5aY\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen style=\"height: 100%; width: 100%;\"></iframe>", baseURL: nil)
+        videoTableView.reloadData()
+   
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,6 +45,11 @@ class VideoViewVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         } else {
             return CategoryCell()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let myCellChoice = DataService.instance.allWorkouts[indexPath.row]
+        videoPlayer.loadVideoID(myCellChoice.videoCode)
     }
 
 

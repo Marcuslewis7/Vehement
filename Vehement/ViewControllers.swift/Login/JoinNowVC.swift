@@ -29,10 +29,14 @@ class JoinNowVC: UIViewController ,GIDSignInUIDelegate, FBSDKLoginButtonDelegate
         setupFacebookButtons()
         setupGoogleButtons()
         createButton.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
-        if Auth.auth().currentUser != nil {
-            //self.performSegue(withIdentifier: "existingAccountSegue", sender: self)
-        }
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if Auth.auth().currentUser != nil {
+            self.performSegue(withIdentifier: "createAccountSegue", sender: self)
+        }
     }
 
     fileprivate func setupGoogleButtons() {
@@ -100,7 +104,8 @@ class JoinNowVC: UIViewController ,GIDSignInUIDelegate, FBSDKLoginButtonDelegate
         ref = Database.database().reference()
         
         if usernameTextField.text != "" {
-            ref.child("UsernameList").childByAutoId().setValue(usernameTextField.text)
+            //ref.child("users").childByAutoId().setValue(usernameTextField.text)
+            Database.database().reference().child("users").childByAutoId().updateChildValues(["email": emailTextField.text!, "username": usernameTextField.text!])
         }
         
     }

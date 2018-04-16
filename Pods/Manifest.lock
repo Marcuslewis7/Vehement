@@ -5,6 +5,9 @@ PODS:
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
   - Crashlytics (3.10.1):
     - Fabric (~> 1.7.5)
   - Fabric (1.7.6)
@@ -47,6 +50,16 @@ PODS:
     - FirebaseAnalytics (~> 4.1)
     - FirebaseCore (~> 4.0)
     - GTMSessionFetcher/Core (~> 1.1)
+  - GoogleMaps (2.6.0):
+    - GoogleMaps/Maps (= 2.6.0)
+  - GoogleMaps/Base (2.6.0)
+  - GoogleMaps/Maps (2.6.0):
+    - GoogleMaps/Base
+  - GooglePlacePicker (2.6.0):
+    - GoogleMaps (= 2.6.0)
+    - GooglePlaces (= 2.6.0)
+  - GooglePlaces (2.6.0):
+    - GoogleMaps/Base (= 2.6.0)
   - GoogleSignIn (4.1.2):
     - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
     - GoogleToolboxForMac/NSString+URLArguments (~> 2.1)
@@ -69,15 +82,38 @@ PODS:
   - GTMSessionFetcher/Core (1.1.14)
   - GTMSessionFetcher/Full (1.1.14):
     - GTMSessionFetcher/Core (= 1.1.14)
+  - JTAppleCalendar (7.1.5)
   - leveldb-library (1.20)
+  - Mapbox-iOS-SDK (3.7.6)
+  - MapboxCoreNavigation (0.16.0):
+    - MapboxDirections.swift (~> 0.19.0)
+    - MapboxMobileEvents (~> 0.3)
+    - Turf (~> 0.0.4)
+  - MapboxDirections.swift (0.19.0):
+    - Polyline (~> 4.2)
+  - MapboxGeocoder.swift (0.8.1)
+  - MapboxMobileEvents (0.3.1)
+  - MapboxNavigation (0.16.0):
+    - Mapbox-iOS-SDK (~> 3.6)
+    - MapboxCoreNavigation (= 0.16.0)
+    - MapboxSpeech (~> 0.0.1)
+    - Solar (~> 2.1)
+    - Turf (~> 0.0.4)
+  - MapboxSpeech (0.0.1)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - Polyline (4.2.0)
+  - Solar (2.1.0)
+  - SwiftyJSON (4.0.0)
+  - SwipeCellKit (2.1.0)
+  - Turf (0.0.4)
   - YouTubePlayer (0.4.0)
 
 DEPENDENCIES:
+  - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - Crashlytics
   - Fabric
   - FBSDKCoreKit
@@ -87,11 +123,30 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - GoogleMaps
+  - GooglePlacePicker
+  - GooglePlaces
   - GoogleSignIn
+  - JTAppleCalendar (~> 7.0)
+  - Mapbox-iOS-SDK (~> 3.7)
+  - MapboxGeocoder.swift (~> 0.8)
+  - MapboxNavigation (~> 0.16)
+  - SwiftyJSON (~> 4.0)
+  - SwipeCellKit
   - YouTubePlayer
+
+EXTERNAL SOURCES:
+  ChameleonFramework:
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
+CHECKOUT OPTIONS:
+  ChameleonFramework:
+    :commit: 6dd284bde21ea2e7f9fd89bc36f40df16e16369d
+    :git: https://github.com/ViccAlexander/Chameleon.git
 
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
   Fabric: f8d42c893bb187326a7968b62abe55c36a987a46
   FBSDKCoreKit: e08ccfcefa7bc1347a07c276dac9bf6c7fe57024
@@ -104,14 +159,30 @@ SPEC CHECKSUMS:
   FirebaseDatabase: 5f0bc6134c5c237cf55f9e1249d406770a75eafd
   FirebaseInstanceID: 8d20d890d65c917f9f7d9950b6e10a760ad34321
   FirebaseStorage: 9a863a2bb96c406958eeff7c2f1dfa9f44c44a13
+  GoogleMaps: 42f91c68b7fa2f84d5c86597b18ceb99f5414c7f
+  GooglePlacePicker: e4488625effb006f59de49e14b7a603e463e4261
+  GooglePlaces: f6ddf33b75cef69e888907d9947c57198ed845f3
   GoogleSignIn: d9ef55b10f0aa401a5de2747f59b725e4b9732ac
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b
+  JTAppleCalendar: 2d4f974f9f3c8b4964d51ca1f6e004883c031fbe
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+  Mapbox-iOS-SDK: 23ececda1d90c3b436b45e2c88e9677f025303c0
+  MapboxCoreNavigation: 0ebb72a3253af35695f2b2bd7c919d67ad354fb5
+  MapboxDirections.swift: 28c683ee94b12c0da7849ec5e579150623180fee
+  MapboxGeocoder.swift: 354fccd4834bae4c5b792428559eb87d994d2cf5
+  MapboxMobileEvents: 0f11c4ca8fed019926611a9486d414ad12bee2fa
+  MapboxNavigation: 6fc118df531264d75f6b22b459ed9271a941b0b7
+  MapboxSpeech: 6cc9b3d53adc2988af3ebc704dd17907b84a3f9f
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  Polyline: 3d69f75bb136357e27291d439d0436c6ebda57a4
+  Solar: 2dc6e7cc39186cb0c8228fa08df76fb50c7d8f24
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  SwipeCellKit: 80bdb188166484d8a0d813d9fd7748ad33181815
+  Turf: 6c169618fa671e3f8a7b764b5b3332053ad6110e
   YouTubePlayer: 028451f6772f372d4759866db99824c676ac1473
 
-PODFILE CHECKSUM: d425d9924417a4461e48ec2d015d53d2ab34e45a
+PODFILE CHECKSUM: 7d94b45c62da2d0dd768e8eccc903c45b179e9dd
 
 COCOAPODS: 1.4.0

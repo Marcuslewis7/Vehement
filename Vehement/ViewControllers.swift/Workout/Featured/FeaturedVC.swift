@@ -51,22 +51,16 @@ class FeaturedVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.mostViewedWorkoutsCollection {
-            print("return ds.i.gmvw.c")
             return DataService.instance.getMostViewedWorkouts().count
         } else if collectionView == self.mostLikedWorkoutsCollection {
-            print("return ds.i.gmlw.c")
             return DataService.instance.getMostLikedWorkouts().count
         } else if collectionView == self.recommendedWorkoutsCollection {
-            print("return ds.i.gRw.c")
             return DataService.instance.getRecommendedWorkouts().count
         } else if collectionView == self.muscleBuildingWorkoutsCollection {
-            print("return ds.i.gmbw.c")
             return DataService.instance.getMuscleBuildingWorkouts().count
         } else if collectionView == self.bodyToningWorkoutsCollection {
-            print("return ds.i.gbtw.c")
             return DataService.instance.getBodyToningWorkouts().count
         } else {
-            print("Return5")
             return 5
         }
     }
@@ -76,54 +70,43 @@ class FeaturedVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
             if let cellA = collectionView.dequeueReusableCell(withReuseIdentifier: "FeaturedWorkoutsCell", for: indexPath) as? FeaturedWorkoutsCell {
                 let workout = DataService.instance.getMostViewedWorkouts()[indexPath.row]
                 cellA.updateViews(workout: workout)
-                print("CELL A")
                 return cellA
             } else {
-                print("GOT HERE1")
                 return FeaturedWorkoutsCell()
             }
         } else if collectionView == self.mostLikedWorkoutsCollection {
             if let cellB = collectionView.dequeueReusableCell(withReuseIdentifier: "MostLikedWorkoutsCell", for: indexPath) as? MostLikedWorkoutsCell {
                 let workout = DataService.instance.getMostLikedWorkouts()[indexPath.row]
                 cellB.updateViews(workout: workout)
-                print("CELL B")
                 return cellB
             } else {
-                print("GOT HERE2")
                 return MostLikedWorkoutsCell()
             }
         } else if collectionView == self.recommendedWorkoutsCollection {
             if let cellC = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommendedWorkoutsCell", for: indexPath) as? RecommendedWorkoutsCell {
                 let workout = DataService.instance.getRecommendedWorkouts()[indexPath.row]
                 cellC.updateViews(workout: workout)
-                print("CELL C")
                 return cellC
             } else {
-                print("GOT HERE3")
                 return RecommendedWorkoutsCell()
             }
         } else if collectionView == self.muscleBuildingWorkoutsCollection {
             if let cellD = collectionView.dequeueReusableCell(withReuseIdentifier: "MuscleBuildingWorkoutsCell", for: indexPath) as? MuscleBuildingWorkoutsCell {
                 let workout = DataService.instance.getMuscleBuildingWorkouts()[indexPath.row]
                 cellD.updateViews(workout: workout)
-                print("CELL D")
                 return cellD
             } else {
-                print("GOT HERE4")
                 return MuscleBuildingWorkoutsCell()
             }
         } else if collectionView == self.bodyToningWorkoutsCollection {
             if let cellE = collectionView.dequeueReusableCell(withReuseIdentifier: "BodyToningWorkoutsCell", for: indexPath) as? BodyToningWorkoutsCell {
                 let workout = DataService.instance.getBodyToningWorkouts()[indexPath.row]
                 cellE.updateViews(workout: workout)
-                print("CELL E")
                 return cellE
             } else {
-                print("GOT HERE5")
                 return BodyToningWorkoutsCell()
             }
         } else {
-            print("FAIL")
             return FeaturedWorkoutsCell()
         }
     }
