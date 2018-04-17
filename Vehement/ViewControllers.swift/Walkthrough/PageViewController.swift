@@ -11,7 +11,9 @@ import UIKit
 class PageViewController: UIPageViewController {
 
     var pageHeaders = ["W O R K O U T", "F I N D  A  G Y M", "G E T  S O C I A L", "P L A N   S C H E D U L E"]
-    var pageImages = ["fullsizeoutput_1154_iphonexspacegrey_portrait", "fullsizeoutput_115e_iphonexspacegrey_portrait", "fullsizeoutput_115b_iphonexspacegrey_portrait", "fullsizeoutput_115c_iphonexspacegrey_portrait"]
+    var pageImages = ["fullsizeoutput_1154_iphonexspacegrey_portrait", "", "fullsizeoutput_1151_iphonexspacegrey_portrait", "fullsizeoutput_115f_iphonexspacegrey_portrait"]
+    var smallPageImages = ["", "fullsizeoutput_1157_iphonexspacegrey_portrait", "", ""]
+    var mediumPageImages = ["", "fullsizeoutput_1156_iphonexspacegrey_portrait", "", ""]
     var pageDescs = ["Learn the best workouts designed and tailored to you!", "Find your local gym and navigate to it!", "Get involved with the vehement community by posting on the wall!", "Plan your workouts for the month!"]
     
     
@@ -19,14 +21,13 @@ class PageViewController: UIPageViewController {
         super.viewDidLoad()
         self.dataSource = self
         
-        
         if let startWalkthroughVC = self.viewControllerAtIndex(index: 0) {
             setViewControllers([startWalkthroughVC], direction: .forward, animated: true, completion: nil)
         }
     }
     
     func nextPageWithIndex(index: Int) {
-        if let nextWalkthroughVC = self.viewControllerAtIndex(index: +1) {
+        if let nextWalkthroughVC = self.viewControllerAtIndex(index: index+1) {
             setViewControllers([nextWalkthroughVC], direction: .forward, animated: true, completion: nil)
         }
     }
@@ -37,6 +38,8 @@ class PageViewController: UIPageViewController {
         }
         if let viewController = storyboard?.instantiateViewController(withIdentifier: "WalkthroughVC") as? WalkthroughVC {
             viewController.imageName = pageImages[index]
+            viewController.smallImageName = smallPageImages[index]
+            viewController.mediumImageName = mediumPageImages[index]
             viewController.headerText = pageHeaders[index]
             viewController.descText = pageDescs[index]
             viewController.index = index

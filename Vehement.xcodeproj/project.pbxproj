@@ -349,6 +349,7 @@
 			children = (
 				914DC85E2066762E000FF017 /* NavTabVC.swift */,
 				914DC8642066817A000FF017 /* WorkoutVC.swift */,
+				914DC86020667900000FF017 /* ProfileVC.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -380,7 +381,6 @@
 		911D2DF320739A51003A6525 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				914DC86020667900000FF017 /* ProfileVC.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";

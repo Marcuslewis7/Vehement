@@ -38,7 +38,7 @@ class SignInVC: UIViewController ,GIDSignInUIDelegate, FBSDKLoginButtonDelegate 
     //add google sign in button
     fileprivate func setupGoogleButtons() {
         let googleButton = GIDSignInButton()
-        googleButton.frame = CGRect(x: 38, y: 559, width: view.frame.width - 70, height: 40)
+        googleButton.frame = CGRect(x: 38, y: 589, width: view.frame.width - 70, height: 40)
         view.addSubview(googleButton)
         GIDSignIn.sharedInstance().uiDelegate = self
     }
@@ -50,7 +50,7 @@ class SignInVC: UIViewController ,GIDSignInUIDelegate, FBSDKLoginButtonDelegate 
     fileprivate func setupFacebookButtons() {
         let loginButton = FBSDKLoginButton()
         view.addSubview(loginButton)
-        loginButton.frame = CGRect(x: 38, y: 510, width: view.frame.width - 74, height: 40)
+        loginButton.frame = CGRect(x: 38, y: 535, width: view.frame.width - 74, height: 40)
         loginButton.delegate = self
     }
     

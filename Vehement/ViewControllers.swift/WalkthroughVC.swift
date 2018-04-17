@@ -13,6 +13,8 @@ class WalkthroughVC: UIViewController {
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var mediumImageView: UIImageView!
+    @IBOutlet weak var smallImageView: UIImageView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
@@ -20,6 +22,8 @@ class WalkthroughVC: UIViewController {
     var index = 0
     var headerText = ""
     var imageName = ""
+    var smallImageName = ""
+    var mediumImageName = ""
     var descText = ""
     
     override func viewDidLoad() {
@@ -28,6 +32,8 @@ class WalkthroughVC: UIViewController {
         headerLabel.text = headerText
         descLabel.text = descText
         imageView.image = UIImage(named: imageName)
+        smallImageView.image = UIImage(named: smallImageName)
+        mediumImageView.image = UIImage(named: mediumImageName)
         pageControl.currentPage = index
     
         startButton.isHidden = (index == 3) ? false : true

@@ -13,9 +13,9 @@ class DataService {
     
     private let categories = [
         Category(title: "ALL WORKOUTS", imageName: "weightbelt.png"),
+        Category(title: "MUSCLE GROUP", imageName: "sixplates.png"),
         Category(title: "FEATURED", imageName: "bicepcurl.png"),
-        Category(title: "MY PLAN", imageName: "gloves.png"),
-        Category(title: "MUSCLE GROUP", imageName: "sixplates.png")
+        Category(title: "FAVOURITE", imageName: "gloves.png")
     ]
     
     let allWorkouts = [
