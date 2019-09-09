@@ -125,7 +125,7 @@ open class Placemark: NSObject, Codable {
         }
     }
     
-    @objc open override var hashValue: Int {
+    @objc open override var hash: Int {
         return identifier.hashValue
     }
     

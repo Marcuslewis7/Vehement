@@ -34,7 +34,7 @@ open class RectangularRegion: CLRegion {
         coder.encodeValue(ofObjCType: "{dd}", at: &northEast)
     }
     
-    @objc open override var hashValue: Int {
+    @objc open override var hash: Int {
         return (southWest.latitude.hashValue + southWest.longitude.hashValue
             + northEast.latitude.hashValue + northEast.longitude.hashValue)
     }

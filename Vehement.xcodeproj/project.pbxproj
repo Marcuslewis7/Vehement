@@ -67,7 +67,6 @@
 		91A1DBD82078F5B5006AB708 /* Turf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A1DBE22078F5B5006AB708 /* Turf.framework */; };
 		91A44C5E206AC7EB003956E4 /* MostLikedWorkoutsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A44C5D206AC7EB003956E4 /* MostLikedWorkoutsCell.swift */; };
 		91AEE03C207A13460074C786 /* stores.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 91AEE03B207A13460074C786 /* stores.geojson */; };
-		91AEE03E207A17AD0074C786 /* CustomItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91AEE03D207A17AD0074C786 /* CustomItemView.xib */; };
 		91AEE040207A242C0074C786 /* NavMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AEE03F207A242C0074C786 /* NavMapVC.swift */; };
 		91AEE042207A2D150074C786 /* NavTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AEE041207A2D150074C786 /* NavTestVC.swift */; };
 		91C0B1A2202B22B400B93401 /* PreLoadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C0B1A1202B22B400B93401 /* PreLoadVC.swift */; };
@@ -181,8 +180,7 @@
 		91A1DBE12078F5B5006AB708 /* Solar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Solar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91A1DBE22078F5B5006AB708 /* Turf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Turf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91A44C5D206AC7EB003956E4 /* MostLikedWorkoutsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostLikedWorkoutsCell.swift; sourceTree = "<group>"; };
-		91AEE03B207A13460074C786 /* stores.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = stores.geojson; path = "../../../../../../Downloads/store-locator-ios-master/mapbox-store-locator/stores.geojson"; sourceTree = "<group>"; };
-		91AEE03D207A17AD0074C786 /* CustomItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomItemView.xib; path = "../../../../Downloads/store-locator-ios-master/mapbox-store-locator/CustomItemView.xib"; sourceTree = "<group>"; };
+		91AEE03B207A13460074C786 /* stores.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = stores.geojson; path = /Users/marcuslewis/Documents/MyVehement/Vehement/ViewControllers.swift/GymFinder/stores.geojson; sourceTree = "<absolute>"; };
 		91AEE03F207A242C0074C786 /* NavMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavMapVC.swift; path = Vehement/ViewControllers.swift/NavMapVC.swift; sourceTree = SOURCE_ROOT; };
 		91AEE041207A2D150074C786 /* NavTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavTestVC.swift; sourceTree = "<group>"; };
 		91C0B1A1202B22B400B93401 /* PreLoadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreLoadVC.swift; sourceTree = "<group>"; };
@@ -476,7 +474,6 @@
 				91D3C7B52028B9070027C6F8 /* Assets.xcassets */,
 				91D3C7B72028B9070027C6F8 /* LaunchScreen.storyboard */,
 				91E1677A206E4C9D00924982 /* Main.storyboard */,
-				91AEE03D207A17AD0074C786 /* CustomItemView.xib */,
 				91D3C7BA2028B9070027C6F8 /* Info.plist */,
 				912F05F9202DD2790023DC98 /* GoogleService-Info.plist */,
 				912F060D202F24E10023DC98 /* ObjectiveCCode.h */,
@@ -624,7 +621,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91AEE03E207A17AD0074C786 /* CustomItemView.xib in Resources */,
 				91D3C7B92028B9070027C6F8 /* LaunchScreen.storyboard in Resources */,
 				91E1677B206E4C9D00924982 /* Main.storyboard in Resources */,
 				91AEE03C207A13460074C786 /* stores.geojson in Resources */,
@@ -961,12 +957,24 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Vehement/Vehement.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 45LUMXSNAB;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"$(inherited)",
+					"GTM_OAUTH2_USE_FRAMEWORK_IMPORTS=1",
+					"$(inherited)",
+					"PB_FIELD_32BIT=1",
+					"PB_NO_PACKED_STRUCTS=1",
+					"DISABLE_PUSH_NOTIFICATIONS=1",
+				);
 				INFOPLIST_FILE = Vehement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MarcusLewis.Smack.Vehement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Vehement/Classes/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -982,12 +990,24 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Vehement/Vehement.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 45LUMXSNAB;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"$(inherited)",
+					"GTM_OAUTH2_USE_FRAMEWORK_IMPORTS=1",
+					"$(inherited)",
+					"PB_FIELD_32BIT=1",
+					"PB_NO_PACKED_STRUCTS=1",
+					"DISABLE_PUSH_NOTIFICATIONS=1",
+				);
 				INFOPLIST_FILE = Vehement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MarcusLewis.Smack.Vehement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Vehement/Classes/Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
